@@ -2,8 +2,13 @@
 from __future__ import print_function
 
 import itertools as it, operator as op, functools as ft
-from collections import Mapping, Sequence, Set, OrderedDict, defaultdict
+from collections import OrderedDict, defaultdict
 import os, sys, re, types
+
+try:
+	from collections.abc import Mapping, Sequence, Set
+except ImportError:
+	from collections import Mapping, Sequence, Set
 
 try: import yaml, yaml.constructor
 except ImportError: pass
